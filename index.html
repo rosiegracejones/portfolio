@@ -2,63 +2,91 @@
 	<html>
 		<head>
 			<title>Rosie Jones</title>
+			<link rel="stylesheet" href="./styles.css" />
+			<link rel="preconnect" href="https://fonts.googleapis.com" />
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+			<link
+				href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&family=Quicksand:wght@300;400;500;600&display=swap"
+				rel="stylesheet"
+			/>
 		</head>
 		<body>
-			<nav class="navbar">
-				<h1>Rosie Jones</h1>
-				<a href="./index.html">Work</a>
-				<a href="./about.html">About</a>
-			</nav>
-			<div class="index-body">
-				<div class="about-me">
+			<div class="navbar">
+				<h2>Rosie Jones</h2>
+				<a href="./index.html"><h3>Work</h3></a>
+				<a href="./about.html"><h3>About</h3></a>
+			</div>
+			<div class="main">
+				<div class="intro">
 					<div>
-						Hi there! I’m Rosie, a web developer based in Bristol, UK. Find out
-						more about me here, or
-						<button>check out some of my projects</button>
+						<h1>Hi there!</h1>
+						<p>
+							I’m Rosie, a web developer based in Bristol, UK.<br />
+							Find out more about me <a href="./about.html">here</a>, or
+						</p>
+						<button class="primary-btn">Check out my work</button>
 					</div>
 					<div>
-						<img src="./1681071994415.jpeg" alt="photo of Rosie smiling" />
+						<img
+							id="profile-img"
+							src="./1681071994415.jpeg"
+							alt="photo of Rosie smiling"
+						/>
 					</div>
 				</div>
 				<div class="project" id="project-1">
-					<div>
+					<div class="project-info">
 						<h1>Rainbow Room</h1>
 						<p>
 							Interactive educational application for children aged 3-5 years
 							old, to aid learning about colours.
 						</p>
+						<a href="#project-2"><button>⬇️</button></a>
 					</div>
 					<div>
 						<img
+							class="project-img"
+							src="./image 1 (2).png"
+							alt="screenshot of rainbow room app"
+						/>
+					</div>
+				</div>
+				<div class="project" id="project-2">
+					<div class="project-info">
+						<h1>NUDGE</h1>
+						<p>
+							Final Project with School of Code, a revision app that uses
+							time-pressured notifications and quizzes to motivate users to
+							revise.
+						</p>
+						<button>⬇️</button>
+					</div>
+					<div>
+						<img
+							class="project-img"
+							src="./Screenshot 2023-07-10 153246.png"
+							alt="screenshot of NUDGE app"
+						/>
+					</div>
+				</div>
+				<div class="project" id="project-3">
+					<div class="project-info">
+						<h1>Project Three</h1>
+						<p>
+							Example project summary here. Lorem, ipsum dolor sit amet
+							consectetur adipisicing elit. Lorem ipsum dolor sit amet
+							consectetur adipisicing elit.
+						</p>
+						<button>⬇️</button>
+					</div>
+					<div>
+						<img
+							class="project-img"
 							src="./rainbow-room.png"
 							alt="screenshot of rainbow room app"
 						/>
 					</div>
 				</div>
-				<div class="project" id="project-2"><div>
-                    <h1>NUDGE</h1>
-                    <p>
-                        Final Project with School of Code, a revision app that uses time-pressured notifications and quizzes to motivate users to revise.
-                    </p>
-                </div>
-                <div>
-                    <img
-                        src="./nudge.png"
-                        alt="screenshot of NUDGE app"
-                    />
-                </div></div>
-				<div class="project" id="project-3"><div>
-                    <h1>Project Three</h1>
-                    <p>
-                        Example project summary here. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                </div>
-                <div>
-                    <img
-                        src="./rainbow-room.png"
-                        alt="screenshot of rainbow room app"
-                    />
-                </div></div>
 			</div>
 		</body>
 	</html>
