@@ -60,7 +60,7 @@ p {
 
 a {
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 a:hover,
@@ -143,6 +143,7 @@ a:active {
 .intro-text a {
 	text-decoration: underline var(--orange);
 	text-decoration-thickness: 3px;
+	color: var(--navy);
 }
 
 .display-container {
@@ -185,8 +186,17 @@ a:active {
 	margin: 0 1vw;
 }
 
-.project-info a {
+.project-info a,
+.project-info a:active,
+.project-info a:visited {
 	text-decoration: underline var(--orange);
+	text-decoration-thickness: 3px;
+	color: var(--navy);
+}
+
+.project-info a:hover,
+.intro-text a:hover {
+	text-decoration: underline var(--lilac);
 	text-decoration-thickness: 3px;
 }
 
