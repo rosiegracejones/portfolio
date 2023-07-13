@@ -63,10 +63,10 @@ a {
 	font-weight: 600;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
 	text-decoration: underline var(--orange);
 	text-decoration-thickness: 3px;
-	font-weight: 600;
 }
 
 .primary-btn {
@@ -140,7 +140,12 @@ a:hover, a:active {
 	margin-right: 5vw;
 }
 
-.shape {
+.intro-text a {
+	text-decoration: underline var(--orange);
+	text-decoration-thickness: 3px;
+}
+
+.display-container {
 	position: relative;
 	width: 32vw;
 }
@@ -151,8 +156,8 @@ a:hover, a:active {
 
 .image {
 	position: absolute;
-	top: 15%;
-	left: 10%;
+	top: 20%;
+	left: 7%;
 }
 
 #profile-img {
@@ -173,25 +178,84 @@ a:hover, a:active {
 	flex-direction: row-reverse;
 }
 
+.project-info {
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+	margin: 0 1vw;
+}
+
+.project-info a {
+	text-decoration: underline var(--orange);
+	text-decoration-thickness: 3px;
+}
+
+.project-info button {
+	align-self: flex-end;
+}
+
 #shape-2 {
 	fill: var(--lilac);
 }
 
 #shape-3 {
-	fill: var(--violet);
+	fill: var(--pink);
 }
 
 #shape-4 {
-	fill: var(--pink);
+	fill: var(--violet);
 }
 
 .project-img {
 	width: 30vw;
+	position: absolute;
 }
 
-.project-info {
-	width: 30vw;
-	margin: 0 1vw;
+.project-btn {
+	border-radius: 50%;
+	border-style: none;
+	background-color: var(--green);
+	font-family: "Quicksand", sans-serif;
+	font-weight: 400;
+	font-size: 2rem;
+	color: var(--white);
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	transition: opacity 0.35s ease;
+	opacity: 0;
+}
+
+.site {
+	top: 35%;
+	left: 20%;
+}
+
+.github {
+	top: 35%;
+	left: 60%;
+}
+
+.project-btn:hover {
+	background-color: var(--yellow);
+	color: var(--white);
+}
+
+.display-container:hover .project-img {
+	opacity: 0.25;
+	transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.display-container:hover .project-btn {
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.project-links {
 }
 
 /* other shapes */
