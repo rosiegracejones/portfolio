@@ -1,12 +1,19 @@
 /* default styles */
 
 :root {
-	--orange: #ff8110;
+	--orange: #fc841c;
 	--violet: #7061f0;
+	--pink: #ff007b;
 	--lilac: #dbacde;
-	--green: #aaaf03;
+	--palelilac: #f9dbf7;
+	--green: #00c896;
+	--yellow: #f3cf31;
 	--white: #fff6f6;
 	--navy: #413a7e;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -16,33 +23,37 @@ body {
 	align-content: center;
 	font-family: "Quicksand", sans-serif;
 	background: var(--white);
-	scroll-behavior: smooth;
+}
+
+.index-body {
+	padding-top: 5vh;
 }
 
 h1 {
 	color: var(--green);
 	font-weight: 600;
-	font-size: 3rem;
+	font-size: 3.5rem;
 	margin: 0;
 }
 
 h2 {
 	color: var(--violet);
 	font-weight: 600;
-	font-size: 2.5rem;
+	font-size: 3rem;
 	margin: 0;
 }
 
 h3 {
 	color: var(--lilac);
 	font-weight: 600;
+	font-size: 2rem;
 	margin: 0;
 }
 
 p {
 	color: var(--navy);
 	font-weight: 400;
-	font-size: 2rem;
+	font-size: 1.75rem;
 	margin: 0;
 	line-height: 1.5;
 }
@@ -52,15 +63,10 @@ a {
 	font-weight: 600;
 }
 
-a:hover {
+a:hover, a:active {
 	text-decoration: underline var(--orange);
 	text-decoration-thickness: 3px;
 	font-weight: 600;
-}
-
-a:active {
-	text-decoration: underline var(--orange);
-	text-decoration-thickness: 3px;
 }
 
 .primary-btn {
@@ -69,15 +75,30 @@ a:active {
 	background-color: var(--orange);
 	font-family: "Quicksand", sans-serif;
 	font-weight: 600;
-	font-size: 2rem;
+	font-size: 1.8rem;
 	color: var(--white);
-	padding: 0.5vw 1vw;
-	margin: 1vw 0;
+	padding: 1vh 1vw;
+	margin: 1vh 0;
 }
 
-.primary-btn:hover {
-	background-color: var(--violet);
+.secondary-btn {
+	border-radius: 50%;
+	border-style: none;
+	background-color: var(--orange);
+	font-family: "Quicksand", sans-serif;
+	font-weight: 400;
+	font-size: 2rem;
 	color: var(--white);
+	width: 60px;
+	height: 60px;
+	writing-mode: vertical-rl;
+	text-orientation: sideways-right;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+	background-color: var(--palelilac);
+	color: var(--violet);
 }
 
 /* navbar */
@@ -92,17 +113,17 @@ a:active {
 	top: 0;
 }
 
+.nav-title {
+	min-width: 175px;
+}
+
 .nav-links {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	width: 15vw;
+	min-width: 250px;
 	font-size: 1.5rem;
 	margin: 0.5vw;
-}
-
-.index-body {
-	padding-top: 5vh;
 }
 
 /* introduction */
@@ -124,10 +145,14 @@ a:active {
 	width: 32vw;
 }
 
+#shape-1 {
+	fill: var(--yellow);
+}
+
 .image {
 	position: absolute;
 	top: 15%;
-	left: 30%;
+	left: 10%;
 }
 
 #profile-img {
@@ -136,28 +161,52 @@ a:active {
 }
 
 /* projects */
-
 .project {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-}
-
-#project-1 {
-	padding-top: 15vh;
+	height: 100vh;
 }
 
 #project-2 {
 	flex-direction: row-reverse;
 }
 
+#shape-2 {
+	fill: var(--lilac);
+}
+
+#shape-3 {
+	fill: var(--violet);
+}
+
+#shape-4 {
+	fill: var(--pink);
+}
+
 .project-img {
 	width: 30vw;
-	margin: 0 1vw;
 }
 
 .project-info {
 	width: 30vw;
 	margin: 0 1vw;
+}
+
+/* other shapes */
+#shape-5 {
+	fill: var(--orange);
+}
+
+#shape-6 {
+	fill: var(--green);
+}
+
+#shape-7 {
+	fill: var(--yellow);
+}
+
+#shape-8 {
+	fill: var(--palelilac);
 }
