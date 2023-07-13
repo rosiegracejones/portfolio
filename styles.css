@@ -212,10 +212,6 @@ a {
 	text-decoration-thickness: 3px;
 }
 
-.project-info button {
-	align-self: flex-end;
-}
-
 #shape-2 {
 	fill: var(--lilac);
 }
@@ -243,8 +239,8 @@ a {
 	font-weight: 400;
 	font-size: 2rem;
 	color: var(--white);
-	width: 130px;
-	height: 130px;
+	width: 8.5vw;
+	height: 8.5vw;
 	position: absolute;
 	transition: opacity 0.35s ease;
 	opacity: 0;
@@ -270,7 +266,7 @@ a {
 }
 
 .display-container:hover .project-img {
-	opacity: 0.25;
+	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
 	-webkit-transition: opacity 0.5s ease-in-out;
@@ -306,5 +302,4 @@ a {
 	justify-content: center;
 	align-items: center;
 	height: 90vh;
-
 }
