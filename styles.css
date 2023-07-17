@@ -3,15 +3,15 @@
 :root {
 	--orange: #fc841c;
 	--violet: #7061f0;
-	--pink: #ff007b;
-	--lilac: #dbacde;
+	--pink: #ff8dbc;
+	--lilac: #d7acde;
 	--palelilac: #f9dbf7;
 	--green: #00c896;
 	--yellow: #f3cf31;
 	--white: #fff6f6;
-	--navy: #413a7e;
+	--navy: #442c51;
+	--grey: #2a242e;
 }
-
 html {
 	scroll-behavior: smooth;
 }
@@ -30,16 +30,16 @@ body {
 }
 
 h1 {
-	color: var(--pink);
+	color: var(--orange);
 	font-weight: 600;
 	font-size: 3.5rem;
 	margin: 0;
 }
 
 h2 {
-	color: var(--violet);
+	color: var(--green);
 	font-weight: 600;
-	font-size: 3rem;
+	font-size: 2.75rem;
 	margin: 0;
 }
 
@@ -49,6 +49,15 @@ h3 {
 	font-size: 2rem;
 	margin: 0;
 }
+
+h4 {
+	color: var(--navy);
+	font-weight: 400;
+	font-size: 1.4rem;
+	margin: 0;
+	line-height: 1.5;
+}
+
 
 p {
 	color: var(--navy);
@@ -75,8 +84,15 @@ a {
 	font-weight: 600;
 	font-size: 1.8rem;
 	color: var(--white);
-	padding: 0.5vh 1vw;
+	padding: 1vh 1.5vw 1vh 1.5vw;
 	margin: 1vh 0;
+}
+
+#arrow {
+	writing-mode: vertical-rl;
+	text-orientation: sideways-right;
+	padding-top: 0.5vh;
+	font-size: 1.4rem;
 }
 
 .secondary-btn {
@@ -108,12 +124,15 @@ a {
 	width: 100vw;
 	position: fixed;
 	background-color: var(--white);
+	left: 0;
 	top: 0;
+	z-index: 1;
 }
 
 .nav-title {
 	min-width: 175px;
 	text-decoration: none;
+	margin-left: 1vw;
 }
 
 .nav-links {
@@ -170,7 +189,7 @@ a {
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	-ms-filter: grayscale(100%);
-	padding-left: 3vw;
+	padding-left: 4vw;
 }
 
 /* project section containers */
@@ -229,7 +248,7 @@ a {
 }
 
 #shape-4 {
-	fill: var(--orange);
+	fill: var(--pink);
 }
 
 .project-img {
@@ -283,18 +302,38 @@ a {
 }
 
 /* other shapes */
+.float-shape {
+	width: 15vw;
+	position: absolute;
+
+}
+
+#fs-1 {
+	top: 175%;
+	left: -8%;
+}
+#fs-2 {
+	top: 275%;
+	right: 0%;
+}
+#fs-3 {
+	top: 170%;
+	left: 40%;
+}
+#fs-4 {
+	top: 170%;
+	left: 20%;
+}
+
 #shape-5 {
 	fill: var(--pink);
 }
-
 #shape-6 {
 	fill: var(--green);
 }
-
 #shape-7 {
 	fill: var(--yellow);
 }
-
 #shape-8 {
 	fill: var(--palelilac);
 }
