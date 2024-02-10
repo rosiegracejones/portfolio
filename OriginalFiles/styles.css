@@ -3,20 +3,21 @@
 :root {
 	--orange: #fc841c;
 	--violet: #7061f0;
-	--pink: #ff8dbc;
-	--lilac: #d7acde;
-	--palelilac: #f9dbf7;
-	--green: #00c896;
-	--yellow: #f3cf31;
+	--pink: #de2874;
+	--lilac: #deacd4;
+	--palelilac: #e3d6dd;
+	--green: #0ccd96;
+	--yellow: #f0c91e;
 	--white: #fff6f6;
-	--navy: #442c51;
-	--grey: #2a242e;
+	--navy: #342f43;
+	--grey: #363636;
 }
 html {
 	scroll-behavior: smooth;
 }
 
 body {
+	margin: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -30,37 +31,34 @@ body {
 }
 
 h1 {
-	color: var(--orange);
 	font-weight: 600;
 	font-size: 3.5rem;
 	margin: 0;
 }
 
 h2 {
-	color: var(--green);
+	color: var(--yellow);
 	font-weight: 600;
 	font-size: 2.75rem;
 	margin: 0;
 }
 
 h3 {
-	color: var(--lilac);
+	color: var(--navy);
 	font-weight: 600;
 	font-size: 2rem;
 	margin: 0;
 }
 
 h4 {
-	color: var(--navy);
 	font-weight: 400;
 	font-size: 1.4rem;
 	margin: 0;
 	line-height: 1.5;
+	padding-top: 2.5vh;
 }
 
-
 p {
-	color: var(--navy);
 	font-weight: 400;
 	font-size: 1.75rem;
 	margin: 0;
@@ -73,7 +71,7 @@ a {
 }
 
 .on-page {
-	text-decoration: underline var(--orange);
+	text-decoration: underline var(--lilac);
 }
 
 .primary-btn {
@@ -84,7 +82,7 @@ a {
 	font-weight: 600;
 	font-size: 1.8rem;
 	color: var(--white);
-	padding: 1vh 1.5vw 1vh 1.5vw;
+	padding: 1vh 2vw 1.25vh 2.25vw;
 	margin: 1vh 0;
 }
 
@@ -111,8 +109,8 @@ a {
 
 .primary-btn:hover,
 .secondary-btn:hover {
-	background-color: var(--palelilac);
-	color: var(--violet);
+	background-color: var(--lilac);
+	color: var(--white);
 }
 
 /* navbar */
@@ -122,6 +120,7 @@ a {
 	justify-content: flex-start;
 	align-items: center;
 	width: 100vw;
+	height: 9vh;
 	position: fixed;
 	background-color: var(--white);
 	left: 0;
@@ -140,12 +139,11 @@ a {
 	flex-direction: row;
 	justify-content: space-evenly;
 	min-width: 300px;
-	font-size: 1.5rem;
 	margin: 0.5vw;
 }
 
 .nav-links a:hover {
-	text-decoration: underline var(--orange);
+	text-decoration: underline var(--lilac);
 	text-decoration-thickness: 3px;
 }
 
@@ -156,16 +154,21 @@ a {
 
 /* introduction */
 .intro {
+	background-color: var(--palelilac);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	padding-top: 17.5vh;
+	padding-top: 10vh;
+	padding-left: 10vw;
+	padding-right: 15vw;
+	height: 80vh;
 }
 
 .intro-text {
 	text-align: center;
 	margin-right: 5vw;
+	color: var(--navy);
 }
 
 .intro-text a {
@@ -211,6 +214,9 @@ a {
 	flex-direction: column;
 	width: 30vw;
 	margin: 0 1vw;
+	padding-left: 2vw;
+	position: absolute;
+	color: var(--white);
 }
 
 .project-info a,
@@ -236,7 +242,7 @@ a {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	width: 32.5vw;
+	width: 40vw;
 }
 
 #shape-2 {
@@ -252,7 +258,7 @@ a {
 }
 
 .project-img {
-	width: 28vw;
+	width: 40vw;
 	position: absolute;
 }
 
@@ -305,7 +311,6 @@ a {
 .float-shape {
 	width: 15vw;
 	position: absolute;
-
 }
 
 #fs-1 {
