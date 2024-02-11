@@ -12,6 +12,7 @@
 	--white: #fff6f6;
 	--navy: #342f43;
 	--grey: #363636;
+	--brown: #88545e;
 }
 
 /* page containers */
@@ -30,8 +31,6 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	width: 100%;
-	height: 100%;
 }
 
 /* text */
@@ -40,12 +39,11 @@ h1 {
 	font-size: 72px;
 	margin: 0;
 	font-weight: 600;
-	color: var(--lilac);
-	;
+	color: var(--brown);
 }
 
 h2 {
-	font-size: 24px;
+	font-size: 18px;
 	margin: 0;
 	font-weight: 400;
 }
@@ -54,13 +52,14 @@ h3 {
 	font-size: 20px;
 	margin: 0;
 	font-weight: 500;
+	
 }
 
 /* links */
 
 a {
 	text-decoration: none;
-	color: black;
+	color: var(--navy);
 }
 
 a:hover {
@@ -74,6 +73,7 @@ a:hover {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 3vh 0 0;
 }
 
 .nav-container {
@@ -83,42 +83,69 @@ a:hover {
 	align-items: center;
 	width: 20vw;
 	background-color: rgb(249, 244, 245);
+	padding: 0 0 4vh;
 }
 
 /*/// work page styles ///*/
-
 .card-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	width: 80vw;
+	width: 90vw;
 }
 
-.work-card {
-	padding: 1rem;
+.my-masonry-grid {
+	display: -webkit-box; /* Not needed if autoprefixing */
+	display: -ms-flexbox; /* Not needed if autoprefixing */
+	display: flex;
+	width: auto;
+}
+.my-masonry-grid_column {
+	padding-left: 30px; /* gutter size */
+	background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > .thumbnail-container {
+	/* change div to reference your elements you put in <Masonry> */
+	margin-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+	.my-masonry-grid {
+		margin-left: -15px; /* gutter size offset */
+	}
+	.my-masonry-grid_column {
+		padding-left: 15px; /* gutter size offset */
+	}
+	.my-masonry-grid_column > div {
+		margin-bottom: 15px; /* space between items */
+	}
+}
+
+.thumbnail-container {
+	width: 275px;
 	position: relative;
 }
 
-.work-card:hover .card-img {
-    opacity: 0.3;
+.thumbnail-container:hover .thumbnail {
+	opacity: 0.3;
 }
 
-.work-card:hover .overlay {
-    opacity: 1;
-}
-
-.card-img {
+.thumbnail-container:hover .thumbnail-overlay {
 	opacity: 1;
-	width: 350px;
-	height: 350px;
+}
+
+.thumbnail {
+	width: 275px;
+	margin-bottom: 40px;
+	opacity: 1;
 	object-fit: cover;
 	transition: 0.5s ease;
 	backface-visibility: hidden;
+	margin: 0;
+	position: relative;
 }
 
-.overlay {
+.thumbnail-overlay {
+	width: 100%;
 	transition: 0.5s ease;
 	opacity: 0;
 	position: absolute;
@@ -127,16 +154,9 @@ a:hover {
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	text-align: center;
-	background-color: rgba(255, 255, 255, 0.45); 
-	width: 100%;
-    height: 100%; 
-	display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.overlay-text {
-	width: 60%;
-}
 
-/* about page styles */
+
+
+

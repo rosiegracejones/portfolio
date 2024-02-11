@@ -1,55 +1,35 @@
-import WorkCard from "../../Components/WorkCard/WorkCard";
-import foot from "../../Images/foot.jpg"
-import swim from "../../Images/swim.jpg"
-import quartet from "../../Images/quartet.jpg"
-import match from "../../Images/match.jpg"
-import knee from "../../Images/knee.png"
-import trumpet from "../../Images/trumpet.jpg"
+import projects from "../../Projects/Projects";
+import Masonry from "react-masonry-css";
 
 function Work() {
-	const projects = [
-		{
-			title: "'Small Pleasures' Animation",
-			description: "'Small Pleasures' Animation Project Still",
-			image: foot,
-		},
-		{
-			title: "Swimming Promotional Poster",
-			description: "Swimming Promotional Poster",
-			image: swim,
-		},
-		{
-			title: "String Quartet Charity Event Poster",
-			description: "String Quartet Charity Event Poster",
-			image: quartet,
-		},
-		{
-			title: "'Playing with Fire' Animation",
-			description: "'Playing with Fire' Animation Project Still",
-			image: match,
-		},
-		{
-			title: "'Hurt' Animation",
-			description: "'Hurt' Animation Project Still",
-			image: knee,
-		},
-		{
-			title: "Children's Play Cards Project",
-			description: "Children's Play Cards Project - Trumpet Card",
-			image: trumpet,
-		},
-	];
-
+	const breakpointColumns = {
+		default: 4,
+		1100: 3,
+		700: 2,
+		500: 1,
+	};
 	return (
 		<div class="card-container">
-			{projects.map((project, index) => (
-				<WorkCard
-					title={project.title}
-					description={project.description}
-					image={project.image}
-					key={index}
-				/>
-			))}
+			<Masonry
+				breakpointCols={breakpointColumns}
+				className="my-masonry-grid"
+				columnClassName="my-masonry-grid_column"
+			>
+				{projects.map((item, index) => (
+					<div class="thumbnail-container">
+						<img
+							class="thumbnail"
+							srcSet={`${item.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
+							src={`${item.image}?w=248&fit=crop&auto=format`}
+							alt={item.title}
+							loading="lazy"
+						/>
+						<div class="thumbnail-overlay">
+							<h2>{item.title}</h2>
+						</div>
+					</div>
+				))}
+			</Masonry>
 		</div>
 	);
 }
