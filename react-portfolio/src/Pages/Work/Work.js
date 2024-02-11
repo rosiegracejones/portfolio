@@ -1,36 +1,42 @@
 import WorkCard from "../../Components/WorkCard/WorkCard";
+import foot from "../../Images/foot.jpg"
+import swim from "../../Images/swim.jpg"
+import quartet from "../../Images/quartet.jpg"
+import match from "../../Images/match.jpg"
+import knee from "../../Images/knee.png"
+import trumpet from "../../Images/trumpet.jpg"
 
 function Work() {
 	const projects = [
 		{
-			title: "Project 1",
-			description: "This is a description of project 1",
-			image: "https://via.placeholder.com/150",
+			title: "'Small Pleasures' Animation",
+			description: "'Small Pleasures' Animation Project Still",
+			image: foot,
 		},
 		{
-			title: "Project 2",
-			description: "This is a description of project 2",
-			image: "https://via.placeholder.com/150",
+			title: "Swimming Promotional Poster",
+			description: "Swimming Promotional Poster",
+			image: swim,
 		},
 		{
-			title: "Project 3",
-			description: "This is a description of project 3",
-			image: "https://via.placeholder.com/150",
+			title: "String Quartet Charity Event Poster",
+			description: "String Quartet Charity Event Poster",
+			image: quartet,
 		},
 		{
-			title: "Project 4",
-			description: "This is a description of project 4",
-			image: "https://via.placeholder.com/150",
+			title: "'Playing with Fire' Animation",
+			description: "'Playing with Fire' Animation Project Still",
+			image: match,
 		},
 		{
-			title: "Project 5",
-			description: "This is a description of project 5",
-			image: "https://via.placeholder.com/150",
+			title: "'Hurt' Animation",
+			description: "'Hurt' Animation Project Still",
+			image: knee,
 		},
 		{
-			title: "Project 6",
-			description: "This is a description of project 6",
-			image: "https://via.placeholder.com/150",
+			title: "Children's Play Cards Project",
+			description: "Children's Play Cards Project - Trumpet Card",
+			image: trumpet,
 		},
 	];
 

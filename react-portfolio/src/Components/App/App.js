@@ -7,6 +7,7 @@ import Header from "../Header/Header";
 
 function App() {
 	return (
+    <div class="app">
 		<BrowserRouter>
 			<Header />
 			<Nav />
@@ -14,7 +15,7 @@ function App() {
 				<Route exact path="/" element={<Work />} />
 				<Route path="/about" element={<About />} />
 			</Routes>
-		</BrowserRouter>
+		</BrowserRouter></div>
 	);
 }
 

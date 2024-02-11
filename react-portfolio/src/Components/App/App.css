@@ -1,44 +1,142 @@
+/*/// default styles ///*/
+
+/* colours */
+:root {
+	--orange: #fc841c;
+	--violet: #7061f0;
+	--pink: #de2874;
+	--lilac: #deacd4;
+	--palelilac: #e3d6dd;
+	--green: #0ccd96;
+	--yellow: #f0c91e;
+	--white: #fff6f6;
+	--navy: #342f43;
+	--grey: #363636;
+}
+
+/* page containers */
 body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	height: 100vh;
-	background-color: rgb(249, 244, 245);
+	background-color: var(--white);
+	font-family: "Quicksand", sans-serif;
 }
 
-app {
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	height: 100%;
+}
+
+/* text */
+
+h1 {
+	font-size: 72px;
+	margin: 0;
+	font-weight: 600;
+	color: var(--lilac);
+	;
+}
+
+h2 {
+	font-size: 24px;
+	margin: 0;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 20px;
+	margin: 0;
+	font-weight: 500;
+}
+
+/* links */
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: var(--green);
+}
+
+/*/// header/nav styles ///*/
+
+.header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 80vw;
 }
-
-/* header/nav styles */
 
 .nav-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	width: 100%;
+	width: 20vw;
 	background-color: rgb(249, 244, 245);
 }
 
-/* work page styles */
+/*/// work page styles ///*/
 
 .card-container {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: flex-start;
-	width: 50vw;
-	min-width: 50vw;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 80vw;
 }
 
 .work-card {
 	padding: 1rem;
+	position: relative;
+}
+
+.work-card:hover .card-img {
+    opacity: 0.3;
+}
+
+.work-card:hover .overlay {
+    opacity: 1;
+}
+
+.card-img {
+	opacity: 1;
+	width: 350px;
+	height: 350px;
+	object-fit: cover;
+	transition: 0.5s ease;
+	backface-visibility: hidden;
+}
+
+.overlay {
+	transition: 0.5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.45); 
+	width: 100%;
+    height: 100%; 
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-text {
+	width: 60%;
 }
 
 /* about page styles */

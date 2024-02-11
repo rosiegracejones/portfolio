@@ -1,7 +1,7 @@
 function Header() {
   return (
-    <div class="header-container">
-        <h1>Rosie Drinkmilk</h1>
+    <div class="header">
+        <h1>rosie drinkmilk</h1>
     </div>
   );
 }
