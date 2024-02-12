@@ -7,15 +7,16 @@ import Header from "../Header/Header";
 
 function App() {
 	return (
-    <div class="app">
-		<BrowserRouter>
-			<Header />
-			<Nav />
-			<Routes>
-				<Route exact path="/" element={<Work />} />
-				<Route path="/about" element={<About />} />
-			</Routes>
-		</BrowserRouter></div>
+		<div className="app">
+			<BrowserRouter>
+				<Header />
+				<Nav />
+				<Routes>
+					<Route exact path="/" element={<Work />} />
+					<Route path="/about" element={<About />} />
+				</Routes>
+			</BrowserRouter>
+		</div>
 	);
 }
 

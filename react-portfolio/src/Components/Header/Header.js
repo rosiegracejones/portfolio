@@ -1,10 +1,8 @@
-import navfootercolour from "../../Images/navfootercolour.png";
-
+import name from "../../Media/name.png";
 function Header() {
 	return (
-		<div class="header">
-			<h1>rosie drinkmilk</h1>
-			<img alt="header" src={navfootercolour} />
+		<div className="header">
+			<img src={name} alt="Rosie Jones" />
 		</div>
 	);
 }

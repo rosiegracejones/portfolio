@@ -12,8 +12,13 @@
 	--white: #fff6f6;
 	--navy: #342f43;
 	--grey: #363636;
+	--lightgrey: #acacac;
 	--brown: #88545e;
 }
+
+/* ::-webkit-scrollbar {
+	display: none;
+} */
 
 /* page containers */
 body {
@@ -36,7 +41,7 @@ body {
 /* text */
 
 h1 {
-	font-size: 72px;
+	font-size: 60px;
 	margin: 0;
 	font-weight: 600;
 	color: var(--brown);
@@ -52,7 +57,13 @@ h3 {
 	font-size: 20px;
 	margin: 0;
 	font-weight: 500;
-	
+}
+
+h4,
+h5 {
+	font-size: 12px;
+	margin: 0 0 5px 0;
+	font-weight: 200;
 }
 
 /* links */
@@ -60,10 +71,6 @@ h3 {
 a {
 	text-decoration: none;
 	color: var(--navy);
-}
-
-a:hover {
-	color: var(--green);
 }
 
 /*/// header/nav styles ///*/
@@ -76,6 +83,11 @@ a:hover {
 	padding: 3vh 0 0;
 }
 
+.header img {
+	width: 20vw;
+	padding: 4vh 0 4vh;
+}
+
 .nav-container {
 	display: flex;
 	flex-direction: row;
@@ -83,12 +95,18 @@ a:hover {
 	align-items: center;
 	width: 20vw;
 	background-color: rgb(249, 244, 245);
-	padding: 0 0 4vh;
+}
+
+.nav-container a:hover {
+	color: var(--green);
 }
 
 /*/// work page styles ///*/
+
+/* masonry/work gallery & overlays */
 .card-container {
 	width: 90vw;
+	margin-top: 5vh;
 }
 
 .my-masonry-grid {
@@ -102,9 +120,7 @@ a:hover {
 	background-clip: padding-box;
 }
 
-/* Style your items */
 .my-masonry-grid_column > .thumbnail-container {
-	/* change div to reference your elements you put in <Masonry> */
 	margin-bottom: 30px;
 }
 
@@ -126,7 +142,7 @@ a:hover {
 }
 
 .thumbnail-container:hover .thumbnail {
-	opacity: 0.3;
+	opacity: 0.2;
 }
 
 .thumbnail-container:hover .thumbnail-overlay {
@@ -156,7 +172,62 @@ a:hover {
 	text-align: center;
 }
 
+/* project details */
 
+.project-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3vh 0 3vh;
+}
 
+.project-description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 50vw;
+	text-align: center;
+	margin-bottom: 20px;
+}
 
+.project-info img,
+.project-info video {
+	height: 60vh;
+}
 
+.slider {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.slider img {
+	height: 60vh;
+	object-fit: cover;
+}
+
+.slider-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider-nav h4:hover {
+	opacity: 0.5;
+}
+
+.slider-thumbnails img {
+	height: 10vh;
+	padding: 2px;
+	margin: 0 3px;
+}
+
+.slider-thumbnails img:hover {
+	border-style: solid;
+	border-color: var(--lightgrey);
+	border-width: 0.5px;
+}
